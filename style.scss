@@ -100,8 +100,22 @@ a {
         border-color: var(--primary);
     }
 }
+.row {
+    .col {
+        &-form-label {
+            font-family: $fontB;
+            font-weight: 700;
+        }
+    }
+}
 .form {
     &-control {
+        border-radius: var(--radius);
+        &-plaintext {
+            &:read-only {
+                outline: none;
+            }
+        }
         &:focus {
             border-color: transparent;
             box-shadow: 0 0 0 2px var(--primary);
@@ -111,6 +125,7 @@ a {
 h {
     &1,&2,&3,&4,&5,&6 {
         font-family: $fontB;
+        font-weight: 700;
     }
 }
 .card {
@@ -362,5 +377,70 @@ h {
     }
     &-popup {
         border-radius: var(--radius);
+    }
+}
+.select2 {
+    &-container {
+        &--focus, &--open {
+            border-radius: var(--radius);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        &--default {
+            .select2-selection {
+                &--single {
+                    border:1px solid #ced4da;
+                    border-radius: var(--radius);
+                    height: auto;
+                    .select2-selection__rendered {
+                        padding: .25rem 1rem;
+                    }
+                    .select2-selection__arrow {
+                        top: calc(50% - 13px);
+                        right: 10px;
+                    }
+                }
+            }
+        }
+        &--open {
+            .select2-dropdown {
+                border:1px solid #ced4da;
+                &--above {
+                    border-bottom: none;
+                    border-radius: var(--radius) var(--radius) 0 0;
+                }
+                &--below  {
+                    border-top: none;
+                    border-radius: 0 0 var(--radius) var(--radius);
+                }
+            }
+        }
+    }
+    &-search {
+        &--dropdown {
+            padding: 1rem;
+        }
+        &__field {
+            border-radius: 4px;
+            outline: none;
+            &:focus {
+                border-color: transparent!important;
+                box-shadow: 0 0 0 2px var(--primary);
+            }
+        }
+    }
+    &-results {
+        &__option {
+            padding: 6px 1rem;
+            &--highlighted[aria-selected] {
+                background-color: var(--primary)!important;
+            }
+            &[aria-selected='true'] {
+                background-color: var(--primary-light)!important;
+                &:hover {
+                    background-color: var(--primary-semi);
+                    color: var(--primary);
+                }
+            }
+        }
     }
 }

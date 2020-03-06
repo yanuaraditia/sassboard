@@ -3,6 +3,7 @@ $(document).ready(function(){
     var wi = $('.sidebar').width();
     $('.bodycast').css('--nav-width',wi+'px');
     startTime();
+    $('.select2-iki').select2();
 });
 function startTime() {
     var today = new Date();
