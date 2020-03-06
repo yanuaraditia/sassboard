@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <div class="bodycast">
+        <div class="sidebar">
+            <div class="sidebar_body">
+                <div class="sidebar_picture">
+                    <figure>
+                        <img src="/images/user.jpg" alt="this">
+                        <a href="#"><i width="18" data-feather="power"></i></a>
+                    </figure>
+                    <h3>Jaden Smith</h3>
+                </div>
+                <div class="sidebar_menu">
+                    <ul class="list-group">
+                        <li class="list-group-item active"><a href="#"><i data-feather="home"></i><span>Dashboard</span></a></li>
+                        <li class="list-group-item"><a href="#"><i data-feather="users"></i><span>Olah Data</span></a></li>
+                        <li class="list-group-item"><a href="#"><i data-feather="credit-card"></i><span>Penggajian</span></a></li>
+                        <li class="list-group-item cetakLaporan"><a href="#"><i data-feather="clipboard"></i><span>Laporan</span></a></li>
+                    </ul>
+                </div>    
+            </div>
+        </div>
+        <main class="wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Library</li>
+                    </ol>
+                </nav>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <form class="form-inline search ml-auto my-2 my-lg-0">
+                    <input class="form-control search-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn my-2 my-sm-0" type="submit"><i data-feather="search"></i></button>
+                  </form>
+                </div>
+                <div class="dropdown dropleft">
+                    <button class="btn dropdown-toggle" id="navMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i data-feather="bell"></i>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-item-notif">
+                                <h3>Update message</h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </a>
+                        <a href="#" class="dropdown-item">
+                            <div class="dropdown-item-notif">
+                                <h3>Notification</h3>
+                                <p>Lorem ipsum dolor sit amet</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </nav>
+            <section class="dash-section mt-4">
+                <div class="container m-0 p-0">
+                    <div class="row">
+                        <div class="col-12 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Member Count</h6>
+                                    <h3 class="card-text">2334</h3>
+                                    <div class="card-icon-top grad-primary">
+                                        <i data-feather="user" width="40" height="40"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Payment Total</h6>
+                                    <h3 class="card-text">$403K</h3>
+                                    <div class="card-icon-top grad-success">
+                                        <i data-feather="credit-card" width="40" height="40"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Role Count</h6>
+                                    <h3 class="card-text">5</h3>
+                                    <div class="card-icon-top grad-warning">
+                                        <i data-feather="user" width="40" height="40"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Exceed</h6>
+                                    <h3 class="card-text">50K</h3>
+                                    <div class="card-icon-top grad-danger">
+                                        <i data-feather="unlock" width="40" height="40"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="dash-table mt-4">
+                <div class="container p-0">
+                    <div class="row">
+                        <div class="col-12 col-lg-8">
+                            <div class="bg-white shadowed radius p-4">
+                                <h3>Table Data</h3>
+                                <hr/>
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">First</th>
+                                        <th scope="col">Last</th>
+                                        <th scope="col">Handle</th>
+                                        <th></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td role='option'>
+                                            <a href="#">
+                                                <i data-feather="edit-2"></i>
+                                            </a>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">2</th>
+                                        <td>Jacob</td>
+                                        <td>Thornton</td>
+                                        <td>@fat</td>
+                                        <td role='option'>
+                                            <a href="#">
+                                                <i data-feather="edit-2"></i>
+                                            </a>
+                                            <button data-name="Painem" class="confirm-btn"></button>
+                                        </td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">3</th>
+                                        <td>Larry</td>
+                                        <td>the Bird</td>
+                                        <td>@twitter</td>
+                                        <td role='option'>
+                                            <a href="#">
+                                                <i data-feather="edit-2"></i>
+                                            </a>
+                                            <button data-name="Paijo" class="confirm-btn"></button>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                </table>
+                            </div>        
+                        </div>
+                        <div class="col-12 col-lg-4">
+                            <div class="bg-white shadowed radius p-3 text-center">
+                                <div class="time grad-danger shadowed radius py-2">
+                                    <h1 class="time-clock m-0" id="clock"></h1>
+                                </div>
+                                <hr/>
+                                <h5>Sunday, 12th January 2022</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
