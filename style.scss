@@ -381,11 +381,21 @@ h {
 }
 .select2 {
     &-container {
-        &--focus, &--open {
+        &--focus {
             border-radius: var(--radius);
             box-shadow: 0 0 0 2px var(--primary);
+            outline:none;
+        }
+        &--open {
+            outline:none;
         }
         &--default {
+            &.select2-container--open {
+                .select2-selection--single {
+                    border-color: transparent;    
+                    box-shadow: var(--shadowA);                
+                }
+            }
             .select2-selection {
                 &--single {
                     border:1px solid #ced4da;
@@ -403,7 +413,8 @@ h {
         }
         &--open {
             .select2-dropdown {
-                border:1px solid #ced4da;
+                border: transparent;
+                box-shadow: var(--shadowA);
                 &--above {
                     border-bottom: none;
                     border-radius: var(--radius) var(--radius) 0 0;
@@ -440,6 +451,34 @@ h {
                     background-color: var(--primary-semi);
                     color: var(--primary);
                 }
+            }
+        }
+    }
+}
+.datepicker {
+    box-shadow: var(--shadowA);
+    border-radius: var(--radius);
+    border: none;
+    padding: 1rem;
+    &-switch {
+        text-align: center;
+        color: var(--primary);
+    }
+    .table-condensed {
+        .prev, .next {
+            text-align: center;
+            border-radius: 100px;
+            color: var(--primary-color);
+        }
+        .day {
+            border-radius: 8px;
+            &:hover {
+                background: var(--primary-light);
+                color: var(--primary);
+            }
+            &.active {
+                background: var(--primary);
+                color: #fff;
             }
         }
     }

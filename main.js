@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('.bodycast').css('--nav-width',wi+'px');
     startTime();
     $('.select2-iki').select2();
+    $('.date-iki').datepicker();
 });
 function startTime() {
     var today = new Date();

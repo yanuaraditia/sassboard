@@ -433,10 +433,21 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius);
 }
 
-.select2-container--focus, .select2-container--open {
+.select2-container--focus {
   border-radius: var(--radius);
   -webkit-box-shadow: 0 0 0 2px var(--primary);
           box-shadow: 0 0 0 2px var(--primary);
+  outline: none;
+}
+
+.select2-container--open {
+  outline: none;
+}
+
+.select2-container--default.select2-container--open .select2-selection--single {
+  border-color: transparent;
+  -webkit-box-shadow: var(--shadowA);
+          box-shadow: var(--shadowA);
 }
 
 .select2-container--default .select2-selection--single {
@@ -455,7 +466,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .select2-container--open .select2-dropdown {
-  border: 1px solid #ced4da;
+  border: transparent;
+  -webkit-box-shadow: var(--shadowA);
+          box-shadow: var(--shadowA);
 }
 
 .select2-container--open .select2-dropdown--above {
@@ -498,5 +511,38 @@ h1, h2, h3, h4, h5, h6 {
 .select2-results__option[aria-selected='true']:hover {
   background-color: var(--primary-semi);
   color: var(--primary);
+}
+
+.datepicker {
+  -webkit-box-shadow: var(--shadowA);
+          box-shadow: var(--shadowA);
+  border-radius: var(--radius);
+  border: none;
+  padding: 1rem;
+}
+
+.datepicker-switch {
+  text-align: center;
+  color: var(--primary);
+}
+
+.datepicker .table-condensed .prev, .datepicker .table-condensed .next {
+  text-align: center;
+  border-radius: 100px;
+  color: var(--primary-color);
+}
+
+.datepicker .table-condensed .day {
+  border-radius: 8px;
+}
+
+.datepicker .table-condensed .day:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.datepicker .table-condensed .day.active {
+  background: var(--primary);
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
